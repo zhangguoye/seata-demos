@@ -7,11 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-mysql" />
-        <module name="seata-account" />
-        <module name="seata-order" />
-        <module name="seata-storage" />
+        <module name="seata-book" />
+        <module name="seata-reader" />
+        <module name="seata-record" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="seata-account" target="1.8" />
+      <module name="seata-order" target="1.8" />
+      <module name="seata-storage" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

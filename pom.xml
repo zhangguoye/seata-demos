@@ -10,9 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>common-mysql</module>
-        <module>seata-storage</module>
-        <module>seata-order</module>
-        <module>seata-account</module>
+        <module>seata-book</module>
+        <module>seata-reader</module>
+        <module>seata-record</module>
     </modules>
 
     <properties>
@@ -21,6 +21,7 @@
         <nacos.version>2.2.0.RELEASE</nacos.version>
         <spring-cloud.seata.version>2.2.0.RELEASE</spring-cloud.seata.version>
         <seata.version>1.1.0</seata.version>
+        <netty4.version>4.1.42.Final</netty4.version>
     </properties>
 
     <dependencies>
@@ -64,12 +65,6 @@
             <artifactId>spring-cloud-alibaba-seata</artifactId>
             <version>${spring-cloud.seata.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.seata</groupId>
-            <artifactId>seata-all</artifactId>
-            <version>${seata.version}</version>
-        </dependency>
-
         <!-- mysql -->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -94,6 +89,16 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-all</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty4.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
